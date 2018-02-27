@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="blog,前端," />
+  <meta name="keywords" content="blog,前端面试," />
 
 
 
@@ -80,14 +80,14 @@
 
 
 <meta name="description" content="前言 个人总结的面试题，第一批。">
-<meta name="keywords" content="blog,前端">
+<meta name="keywords" content="blog,前端面试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试题总结">
 <meta property="og:url" content="http://yoursite.com/2018/02/27/面试题总结/index.html">
 <meta property="og:site_name" content="崔校瑜的博客">
 <meta property="og:description" content="前言 个人总结的面试题，第一批。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-27T07:05:19.930Z">
+<meta property="og:updated_time" content="2018-02-27T07:50:51.146Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试题总结">
 <meta name="twitter:description" content="前言 个人总结的面试题，第一批。">
@@ -346,20 +346,20 @@
 <p>个人总结的面试题，第一批。</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="面试题总结"><a href="#面试题总结" class="headerlink" title="面试题总结"></a>面试题总结</h1><h3 id="前端优化手段有哪些？"><a href="#前端优化手段有哪些？" class="headerlink" title="前端优化手段有哪些？"></a>前端优化手段有哪些？</h3><p>css文件放在上面，js文件放在下面</p>
-<h3 id="为什么这么做？"><a href="#为什么这么做？" class="headerlink" title="为什么这么做？"></a>为什么这么做？</h3><p>js下载解析会阻塞DOM树渲染</p>
-<h3 id="如何做让js不阻塞DOM树渲染？"><a href="#如何做让js不阻塞DOM树渲染？" class="headerlink" title="如何做让js不阻塞DOM树渲染？"></a>如何做让js不阻塞DOM树渲染？</h3><p>用defer或async字段</p>
-<h3 id="两者有什么区别？"><a href="#两者有什么区别？" class="headerlink" title="两者有什么区别？"></a>两者有什么区别？</h3><p>defer是等待DOM树加载完毕，只能IE使用<br>async是异步加载js</p>
-<h3 id="css下载解析会不会阻塞DOM树渲染？"><a href="#css下载解析会不会阻塞DOM树渲染？" class="headerlink" title="css下载解析会不会阻塞DOM树渲染？"></a>css下载解析会不会阻塞DOM树渲染？</h3><p>会，css加载不会阻塞DOM树解析，但会阻塞渲染，而且会阻塞js语句运行</p>
-<h3 id="那如何解决？"><a href="#那如何解决？" class="headerlink" title="那如何解决？"></a>那如何解决？</h3><p>1.使用CDN<br>2.对css进行压缩<br>3.合理使用缓存<br>4.减少http请求数，将多个css文件合并，或干脆写内联样式</p>
-<h3 id="接着说优化手段"><a href="#接着说优化手段" class="headerlink" title="接着说优化手段"></a>接着说优化手段</h3><p>CSS-sprit（雪碧图，即把小图标都集合在一张大图上，减少请求图片次数）或者将小图用base64内嵌</p>
-<h3 id="CSS-sprit的原理是什么？"><a href="#CSS-sprit的原理是什么？" class="headerlink" title="CSS-sprit的原理是什么？"></a>CSS-sprit的原理是什么？</h3><p>CSS Sprites其实就是把网页中一些背景图片整合到一张图片文件中，再利用CSS的“background-image”，“background- repeat”，“background-position”的组合进行背景定位，background-position可以用数字能精确的定位出背景图片的位置。</p>
-<h3 id="使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64"><a href="#使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64" class="headerlink" title="使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64?"></a>使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64?</h3><p>比较小且常用的图标用base64</p>
-<h3 id="http和https的区别？"><a href="#http和https的区别？" class="headerlink" title="http和https的区别？"></a>http和https的区别？</h3><p>HTTPS增加了SSL层</p>
-<h3 id="SSL四次握手过程"><a href="#SSL四次握手过程" class="headerlink" title="SSL四次握手过程?"></a>SSL四次握手过程?</h3><p>1、客户端请求建立SSL链接，并向服务端发送一个随机数–Client random和客户端支持的加密方法，比如RSA公钥加密，此时是明文传输。<br>2、服务端回复一种客户端支持的加密方法、一个随机数–Server random、授信的服务器证书和非对称加密的公钥。<br>3、客户端收到服务端的回复后利用服务端的公钥，加上新的随机数–Premaster secret 通过服务端下发的公钥及加密方法进行加密，发送给服务器。<br>4、服务端收到客户端的回复，利用已知的加解密方式进行解密，同时利用Client random、Server random和Premaster secret通过一定的算法生成HTTP链接数据传输的对称加密key – session key。</p>
+<h1 id="面试题总结"><a href="#面试题总结" class="headerlink" title="面试题总结"></a>面试题总结</h1><h2 id="前端优化手段有哪些？"><a href="#前端优化手段有哪些？" class="headerlink" title="前端优化手段有哪些？"></a>前端优化手段有哪些？</h2><p>css文件放在上面，js文件放在下面</p>
+<h2 id="为什么这么做？"><a href="#为什么这么做？" class="headerlink" title="为什么这么做？"></a>为什么这么做？</h2><p>js下载解析会阻塞DOM树渲染</p>
+<h2 id="如何做让js不阻塞DOM树渲染？"><a href="#如何做让js不阻塞DOM树渲染？" class="headerlink" title="如何做让js不阻塞DOM树渲染？"></a>如何做让js不阻塞DOM树渲染？</h2><p>用defer或async字段</p>
+<h2 id="两者有什么区别？"><a href="#两者有什么区别？" class="headerlink" title="两者有什么区别？"></a>两者有什么区别？</h2><p>defer是等待DOM树加载完毕，只能IE使用<br>async是异步加载js</p>
+<h2 id="css下载解析会不会阻塞DOM树渲染？"><a href="#css下载解析会不会阻塞DOM树渲染？" class="headerlink" title="css下载解析会不会阻塞DOM树渲染？"></a>css下载解析会不会阻塞DOM树渲染？</h2><p>会，css加载不会阻塞DOM树解析，但会阻塞渲染，而且会阻塞js语句运行</p>
+<h2 id="那如何解决？"><a href="#那如何解决？" class="headerlink" title="那如何解决？"></a>那如何解决？</h2><p>1.使用CDN<br>2.对css进行压缩<br>3.合理使用缓存<br>4.减少http请求数，将多个css文件合并，或干脆写内联样式</p>
+<h2 id="接着说优化手段"><a href="#接着说优化手段" class="headerlink" title="接着说优化手段"></a>接着说优化手段</h2><p>CSS-sprit（雪碧图，即把小图标都集合在一张大图上，减少请求图片次数）或者将小图用base64内嵌</p>
+<h2 id="CSS-sprit的原理是什么？"><a href="#CSS-sprit的原理是什么？" class="headerlink" title="CSS-sprit的原理是什么？"></a>CSS-sprit的原理是什么？</h2><p>CSS Sprites其实就是把网页中一些背景图片整合到一张图片文件中，再利用CSS的“background-image”，“background- repeat”，“background-position”的组合进行背景定位，background-position可以用数字能精确的定位出背景图片的位置。</p>
+<h2 id="使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64"><a href="#使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64" class="headerlink" title="使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64?"></a>使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64?</h2><p>比较小且常用的图标用base64</p>
+<h2 id="http和https的区别？"><a href="#http和https的区别？" class="headerlink" title="http和https的区别？"></a>http和https的区别？</h2><p>HTTPS增加了SSL层</p>
+<h2 id="SSL四次握手过程"><a href="#SSL四次握手过程" class="headerlink" title="SSL四次握手过程?"></a>SSL四次握手过程?</h2><p>1、客户端请求建立SSL链接，并向服务端发送一个随机数–Client random和客户端支持的加密方法，比如RSA公钥加密，此时是明文传输。<br>2、服务端回复一种客户端支持的加密方法、一个随机数–Server random、授信的服务器证书和非对称加密的公钥。<br>3、客户端收到服务端的回复后利用服务端的公钥，加上新的随机数–Premaster secret 通过服务端下发的公钥及加密方法进行加密，发送给服务器。<br>4、服务端收到客户端的回复，利用已知的加解密方式进行解密，同时利用Client random、Server random和Premaster secret通过一定的算法生成HTTP链接数据传输的对称加密key – session key。</p>
 <p>此后的HTTP链接数据传输即通过对称加密方式进行加密传输。</p>
-<h3 id="SSL握手时有对称加密和非对称加密吗？"><a href="#SSL握手时有对称加密和非对称加密吗？" class="headerlink" title="SSL握手时有对称加密和非对称加密吗？"></a>SSL握手时有对称加密和非对称加密吗？</h3><p>有</p>
-<h3 id="如何优化这一层？"><a href="#如何优化这一层？" class="headerlink" title="如何优化这一层？"></a>如何优化这一层？</h3><p>1） Session Resumption 会话重用</p>
+<h2 id="SSL握手时有对称加密和非对称加密吗？"><a href="#SSL握手时有对称加密和非对称加密吗？" class="headerlink" title="SSL握手时有对称加密和非对称加密吗？"></a>SSL握手时有对称加密和非对称加密吗？</h2><p>有</p>
+<h2 id="如何优化这一层？"><a href="#如何优化这一层？" class="headerlink" title="如何优化这一层？"></a>如何优化这一层？</h2><p>1） Session Resumption 会话重用</p>
 <p>这是一种缓存技术，有两种做法，一种是在服务器端，把 session ID 缓存在服务器，客户同服务器比对 session ID，就不用来回多次验证了；还有一种做法是 Session ticket，相对而言，这比session ID 更好，开销小，并且服务器压力夜宵。</p>
 <p>2） 采用 Elliptic Curve Cryptography 椭圆曲线加密算法</p>
 <p>椭圆曲线加密（ECC）是一种加密技术，实现了以较小的密钥得到比较高的加密密级。ECC已被大多数的浏览器和服务器所广泛支持，但是必须要使用ECC的证书。</p>
@@ -369,9 +369,9 @@
 <p>这是用来向证书签发者验证SSL证书的有效性的技术，一般是浏览器需要额外向证书签发者请求验证，而 OCSP Stapling就可以省去该步骤，把有效性验证结果储存在服务器，直接返回给用户了。</p>
 <p>5) 启用 HTST</p>
 <p>在启用HTST后，浏览器只要访问过一次，以后哪怕是 http 的链接，在浏览器发出请求之前，就已经直接帮你转化成 https 了，这样就避免了一次服务器端的跳转或转向。</p>
-<h3 id="还有哪些优化手段？"><a href="#还有哪些优化手段？" class="headerlink" title="还有哪些优化手段？"></a>还有哪些优化手段？</h3><p>将静态内容推向CDN</p>
-<h3 id="现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页"><a href="#现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页" class="headerlink" title="现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页?"></a>现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页?</h3><p>CSS inline</p>
-<h3 id="localstorage的用法以及与cookie的区别"><a href="#localstorage的用法以及与cookie的区别" class="headerlink" title="localstorage的用法以及与cookie的区别"></a>localstorage的用法以及与cookie的区别</h3><p>用法：getItem、setItem、clearItem</p>
+<h2 id="还有哪些优化手段？"><a href="#还有哪些优化手段？" class="headerlink" title="还有哪些优化手段？"></a>还有哪些优化手段？</h2><p>将静态内容推向CDN</p>
+<h2 id="现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页"><a href="#现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页" class="headerlink" title="现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页?"></a>现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页?</h2><p>CSS inline</p>
+<h2 id="localstorage的用法以及与cookie的区别"><a href="#localstorage的用法以及与cookie的区别" class="headerlink" title="localstorage的用法以及与cookie的区别"></a>localstorage的用法以及与cookie的区别</h2><p>用法：getItem、setItem、clearItem</p>
 <table>
 <thead>
 <tr>
@@ -408,7 +408,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="HTML5和css3新特性"><a href="#HTML5和css3新特性" class="headerlink" title="HTML5和css3新特性"></a>HTML5和css3新特性</h3><p><a href="http://blog.csdn.net/chandoudeyuyi/article/details/69206236" target="_blank" rel="external">http://blog.csdn.net/chandoudeyuyi/article/details/69206236</a></p>
+<h2 id="HTML5和css3新特性"><a href="#HTML5和css3新特性" class="headerlink" title="HTML5和css3新特性"></a>HTML5和css3新特性</h2><p><a href="http://blog.csdn.net/chandoudeyuyi/article/details/69206236" target="_blank" rel="external">http://blog.csdn.net/chandoudeyuyi/article/details/69206236</a></p>
 
       
     </div>
@@ -428,7 +428,7 @@
           
             <a href="/tags/blog/" rel="tag"># blog</a>
           
-            <a href="/tags/前端/" rel="tag"># 前端</a>
+            <a href="/tags/前端面试/" rel="tag"># 前端面试</a>
           
         </div>
       
@@ -552,7 +552,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -587,7 +587,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试题总结"><span class="nav-number">2.</span> <span class="nav-text">面试题总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前端优化手段有哪些？"><span class="nav-number">2.0.1.</span> <span class="nav-text">前端优化手段有哪些？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么这么做？"><span class="nav-number">2.0.2.</span> <span class="nav-text">为什么这么做？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何做让js不阻塞DOM树渲染？"><span class="nav-number">2.0.3.</span> <span class="nav-text">如何做让js不阻塞DOM树渲染？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#两者有什么区别？"><span class="nav-number">2.0.4.</span> <span class="nav-text">两者有什么区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css下载解析会不会阻塞DOM树渲染？"><span class="nav-number">2.0.5.</span> <span class="nav-text">css下载解析会不会阻塞DOM树渲染？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#那如何解决？"><span class="nav-number">2.0.6.</span> <span class="nav-text">那如何解决？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接着说优化手段"><span class="nav-number">2.0.7.</span> <span class="nav-text">接着说优化手段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS-sprit的原理是什么？"><span class="nav-number">2.0.8.</span> <span class="nav-text">CSS-sprit的原理是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64"><span class="nav-number">2.0.9.</span> <span class="nav-text">使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#http和https的区别？"><span class="nav-number">2.0.10.</span> <span class="nav-text">http和https的区别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSL四次握手过程"><span class="nav-number">2.0.11.</span> <span class="nav-text">SSL四次握手过程?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SSL握手时有对称加密和非对称加密吗？"><span class="nav-number">2.0.12.</span> <span class="nav-text">SSL握手时有对称加密和非对称加密吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何优化这一层？"><span class="nav-number">2.0.13.</span> <span class="nav-text">如何优化这一层？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#还有哪些优化手段？"><span class="nav-number">2.0.14.</span> <span class="nav-text">还有哪些优化手段？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页"><span class="nav-number">2.0.15.</span> <span class="nav-text">现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#localstorage的用法以及与cookie的区别"><span class="nav-number">2.0.16.</span> <span class="nav-text">localstorage的用法以及与cookie的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5和css3新特性"><span class="nav-number">2.0.17.</span> <span class="nav-text">HTML5和css3新特性</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试题总结"><span class="nav-number">2.</span> <span class="nav-text">面试题总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前端优化手段有哪些？"><span class="nav-number">2.1.</span> <span class="nav-text">前端优化手段有哪些？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么这么做？"><span class="nav-number">2.2.</span> <span class="nav-text">为什么这么做？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何做让js不阻塞DOM树渲染？"><span class="nav-number">2.3.</span> <span class="nav-text">如何做让js不阻塞DOM树渲染？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两者有什么区别？"><span class="nav-number">2.4.</span> <span class="nav-text">两者有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css下载解析会不会阻塞DOM树渲染？"><span class="nav-number">2.5.</span> <span class="nav-text">css下载解析会不会阻塞DOM树渲染？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#那如何解决？"><span class="nav-number">2.6.</span> <span class="nav-text">那如何解决？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接着说优化手段"><span class="nav-number">2.7.</span> <span class="nav-text">接着说优化手段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-sprit的原理是什么？"><span class="nav-number">2.8.</span> <span class="nav-text">CSS-sprit的原理是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64"><span class="nav-number">2.9.</span> <span class="nav-text">使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http和https的区别？"><span class="nav-number">2.10.</span> <span class="nav-text">http和https的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL四次握手过程"><span class="nav-number">2.11.</span> <span class="nav-text">SSL四次握手过程?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL握手时有对称加密和非对称加密吗？"><span class="nav-number">2.12.</span> <span class="nav-text">SSL握手时有对称加密和非对称加密吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何优化这一层？"><span class="nav-number">2.13.</span> <span class="nav-text">如何优化这一层？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#还有哪些优化手段？"><span class="nav-number">2.14.</span> <span class="nav-text">还有哪些优化手段？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页"><span class="nav-number">2.15.</span> <span class="nav-text">现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#localstorage的用法以及与cookie的区别"><span class="nav-number">2.16.</span> <span class="nav-text">localstorage的用法以及与cookie的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5和css3新特性"><span class="nav-number">2.17.</span> <span class="nav-text">HTML5和css3新特性</span></a></li></ol></li></ol></div>
             
 
           </div>

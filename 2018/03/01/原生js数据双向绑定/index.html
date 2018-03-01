@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="blog,原理," />
 
 
 
@@ -80,13 +80,14 @@
 
 
 <meta name="description" content="前言 对原生js数据双向绑定自己的理解，浅入浅出。">
+<meta name="keywords" content="blog,原理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="原生js数据双向绑定">
 <meta property="og:url" content="http://yoursite.com/2018/03/01/原生js数据双向绑定/index.html">
 <meta property="og:site_name" content="崔校瑜的博客">
 <meta property="og:description" content="前言 对原生js数据双向绑定自己的理解，浅入浅出。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-01T08:37:00.447Z">
+<meta property="og:updated_time" content="2018-03-01T08:42:51.055Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="原生js数据双向绑定">
 <meta name="twitter:description" content="前言 对原生js数据双向绑定自己的理解，浅入浅出。">
@@ -292,6 +293,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/blog/" itemprop="url" rel="index">
+                    <span itemprop="name">blog</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -326,7 +349,7 @@
 <h2 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty()"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="external">Object.defineProperty()</a></h2><p>Object.defineProperty()方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象。它是一个存取描述符，具有以下可选键值：</p>
 <blockquote>
 <p>get：<br>一个给属性提供 getter 的方法，如果没有 getter 则为 undefined。该方法返回值被用作属性值。默认为 undefined。</p>
-<p>set：一个给属性提供 setter 的方法，如果没有 setter 则为 undefined。该方法将接受唯一参数，并将该参数的新值分配给该属性。默认为 undefined。</p>
+<p>set：<br>一个给属性提供 setter 的方法，如果没有 setter 则为 undefined。该方法将接受唯一参数，并将该参数的新值分配给该属性。默认为 undefined。</p>
 </blockquote>
 <p>具体用法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;&#125;;</span><br><span class="line">obj.name = &apos;abc&apos;;</span><br><span class="line">Object.defineProperty(obj, &apos;name&apos;, &#123;</span><br><span class="line">    get: function()&#123;</span><br><span class="line">        console.log(&apos;get被调用&apos;);</span><br><span class="line">    &#125;,</span><br><span class="line">    set: function(value)&#123;</span><br><span class="line">        console.log(&apos;set被调用&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">obj.name; // get被调用</span><br><span class="line">obj.name = &apos;def&apos;; // set被调用</span><br></pre></td></tr></table></figure>
@@ -355,6 +378,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/blog/" rel="tag"># blog</a>
+          
+            <a href="/tags/原理/" rel="tag"># 原理</a>
+          
+        </div>
       
 
       
@@ -476,7 +507,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

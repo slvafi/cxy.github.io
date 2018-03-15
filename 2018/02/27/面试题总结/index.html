@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="崔校瑜的博客">
 <meta property="og:description" content="前言 个人总结的面试题，第一弹。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-27T08:06:13.952Z">
+<meta property="og:updated_time" content="2018-03-15T01:16:56.809Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试题总结">
 <meta name="twitter:description" content="前言 个人总结的面试题，第一弹。">
@@ -409,6 +409,33 @@
 </tbody>
 </table>
 <h2 id="HTML5和css3新特性"><a href="#HTML5和css3新特性" class="headerlink" title="HTML5和css3新特性"></a>HTML5和css3新特性</h2><p><a href="http://blog.csdn.net/chandoudeyuyi/article/details/69206236" target="_blank" rel="external">http://blog.csdn.net/chandoudeyuyi/article/details/69206236</a></p>
+<h2 id="CSS-中transition和animate有何区别"><a href="#CSS-中transition和animate有何区别" class="headerlink" title="CSS 中transition和animate有何区别?"></a>CSS 中transition和animate有何区别?</h2><p>transition一般用来做过渡的, 没时间轴的概念, 通过事件触发(一次),没中间状态(只有开始和结束)<br>而animate则是做动效,有时间轴的概念(帧可控),可以重复触发和有中间状态;<br>过渡的开销比动效小,前者一般用于交互居多,后者用于活动页居多。</p>
+<h2 id="如何实现对象的深度拷贝"><a href="#如何实现对象的深度拷贝" class="headerlink" title="如何实现对象的深度拷贝"></a>如何实现对象的深度拷贝</h2><p>1.递归<br>2.var newObject = JSON.parse(JSON.stringify(oldObject));<br>3.var newObject = Object.create(oldObject);</p>
+<h2 id="怎么解决跨域问题-有哪些方法"><a href="#怎么解决跨域问题-有哪些方法" class="headerlink" title="怎么解决跨域问题,有哪些方法"></a>怎么解决跨域问题,有哪些方法</h2><p>cors,nginx反向代理,jsonp,postMessage<br>jsonp : 单纯的 get一些数据,局限性很大,就是利用script标签的src属性来实现跨域。<br>nginx 反向代理: 主要就是用了nginx.conf内的proxy_pass <a href="http://xxx.xxx.xxx,会把所有请求代理到那个域名,有利也有弊。" target="_blank" rel="external">http://xxx.xxx.xxx,会把所有请求代理到那个域名,有利也有弊。</a><br>cors:可控性较强,需要前后端都设置,兼容性 IE10+ ,比如:</p>
+<ul>
+<li>Access-Control-Allow-Origin: <a href="http://foo.example" target="_blank" rel="external">http://foo.example</a>  // 子域乃至整个域名或所有域名是否允许访问</li>
+<li>Access-Control-Allow-Methods: POST, GET, OPTIONS // 允许那些行为方法</li>
+<li>Access-Control-Allow-Headers: X-PINGOTHER, Content-Type  // 允许的头部字段</li>
+<li>Access-Control-Max-Age: 86400  // 有效期</li>
+</ul>
+<h2 id="前端优化手段有哪些"><a href="#前端优化手段有哪些" class="headerlink" title="前端优化手段有哪些"></a>前端优化手段有哪些</h2><p>客户端：</p>
+<ul>
+<li>压缩代码(JS/CSS),压缩图片</li>
+<li>合并一些小图片(css sprite)</li>
+<li>若是打包的代码尽可能切割成多个 chunk,减少单一 chunk过大</li>
+<li>静态文件采用 cdn 引入</li>
+<li>HTTP的缓存头使用的合理</li>
+<li>减小第三方库的依赖</li>
+<li>对于代码应该考虑性能来编写,比如使用requestAnimationFrame绘制动画,尽可能减少页面重绘(DOM 改变)</li>
+<li>渐进升级,引入preload这些预加载资源</li>
+<li>看情况用service worker来缓存资源(比如移动端打算搞 PWA)</li>
+</ul>
+<p>服务端：</p>
+<ul>
+<li>带宽,域名解析, 多域名解析等</li>
+<li>页面做服务端渲染,减小对浏览器的依赖(不用客户端解析)</li>
+<li>渐进升级,比如引入 HTTP2(多路复用,头部压缩这些可以明显加快加载速度)</li>
+</ul>
 
       
     </div>
@@ -591,7 +618,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试题总结"><span class="nav-number">2.</span> <span class="nav-text">面试题总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前端优化手段有哪些？"><span class="nav-number">2.1.</span> <span class="nav-text">前端优化手段有哪些？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么这么做？"><span class="nav-number">2.2.</span> <span class="nav-text">为什么这么做？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何做让js不阻塞DOM树渲染？"><span class="nav-number">2.3.</span> <span class="nav-text">如何做让js不阻塞DOM树渲染？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两者有什么区别？"><span class="nav-number">2.4.</span> <span class="nav-text">两者有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css下载解析会不会阻塞DOM树渲染？"><span class="nav-number">2.5.</span> <span class="nav-text">css下载解析会不会阻塞DOM树渲染？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#那如何解决？"><span class="nav-number">2.6.</span> <span class="nav-text">那如何解决？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接着说优化手段"><span class="nav-number">2.7.</span> <span class="nav-text">接着说优化手段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-sprit的原理是什么？"><span class="nav-number">2.8.</span> <span class="nav-text">CSS-sprit的原理是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64"><span class="nav-number">2.9.</span> <span class="nav-text">使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http和https的区别？"><span class="nav-number">2.10.</span> <span class="nav-text">http和https的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL四次握手过程"><span class="nav-number">2.11.</span> <span class="nav-text">SSL四次握手过程?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL握手时有对称加密和非对称加密吗？"><span class="nav-number">2.12.</span> <span class="nav-text">SSL握手时有对称加密和非对称加密吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何优化这一层？"><span class="nav-number">2.13.</span> <span class="nav-text">如何优化这一层？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#还有哪些优化手段？"><span class="nav-number">2.14.</span> <span class="nav-text">还有哪些优化手段？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页"><span class="nav-number">2.15.</span> <span class="nav-text">现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#localstorage的用法以及与cookie的区别"><span class="nav-number">2.16.</span> <span class="nav-text">localstorage的用法以及与cookie的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5和css3新特性"><span class="nav-number">2.17.</span> <span class="nav-text">HTML5和css3新特性</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试题总结"><span class="nav-number">2.</span> <span class="nav-text">面试题总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前端优化手段有哪些？"><span class="nav-number">2.1.</span> <span class="nav-text">前端优化手段有哪些？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么这么做？"><span class="nav-number">2.2.</span> <span class="nav-text">为什么这么做？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何做让js不阻塞DOM树渲染？"><span class="nav-number">2.3.</span> <span class="nav-text">如何做让js不阻塞DOM树渲染？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两者有什么区别？"><span class="nav-number">2.4.</span> <span class="nav-text">两者有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css下载解析会不会阻塞DOM树渲染？"><span class="nav-number">2.5.</span> <span class="nav-text">css下载解析会不会阻塞DOM树渲染？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#那如何解决？"><span class="nav-number">2.6.</span> <span class="nav-text">那如何解决？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接着说优化手段"><span class="nav-number">2.7.</span> <span class="nav-text">接着说优化手段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-sprit的原理是什么？"><span class="nav-number">2.8.</span> <span class="nav-text">CSS-sprit的原理是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64"><span class="nav-number">2.9.</span> <span class="nav-text">使用base64虽然会减少请求数，但是会增大文件的大小，以什么为基准去衡量什么时候使用base64?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http和https的区别？"><span class="nav-number">2.10.</span> <span class="nav-text">http和https的区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL四次握手过程"><span class="nav-number">2.11.</span> <span class="nav-text">SSL四次握手过程?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSL握手时有对称加密和非对称加密吗？"><span class="nav-number">2.12.</span> <span class="nav-text">SSL握手时有对称加密和非对称加密吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何优化这一层？"><span class="nav-number">2.13.</span> <span class="nav-text">如何优化这一层？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#还有哪些优化手段？"><span class="nav-number">2.14.</span> <span class="nav-text">还有哪些优化手段？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页"><span class="nav-number">2.15.</span> <span class="nav-text">现在CDN不稳，时而工作时而崩溃，我有一个首页如何确保每次都能正常显示该首页?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#localstorage的用法以及与cookie的区别"><span class="nav-number">2.16.</span> <span class="nav-text">localstorage的用法以及与cookie的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5和css3新特性"><span class="nav-number">2.17.</span> <span class="nav-text">HTML5和css3新特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-中transition和animate有何区别"><span class="nav-number">2.18.</span> <span class="nav-text">CSS 中transition和animate有何区别?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何实现对象的深度拷贝"><span class="nav-number">2.19.</span> <span class="nav-text">如何实现对象的深度拷贝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么解决跨域问题-有哪些方法"><span class="nav-number">2.20.</span> <span class="nav-text">怎么解决跨域问题,有哪些方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前端优化手段有哪些"><span class="nav-number">2.21.</span> <span class="nav-text">前端优化手段有哪些</span></a></li></ol></li></ol></div>
             
 
           </div>
